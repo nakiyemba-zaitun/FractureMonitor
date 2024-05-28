@@ -17,19 +17,19 @@ import com.example.fracturemonitor.ui.components.ApprovalButton
 import com.example.fracturemonitor.ui.components.UserTextField
 
 @Composable
-fun LoginScreen(modifier: Modifier=Modifier){
-    Column(
-        modifier
-            .fillMaxSize()
-            .background(color = MaterialTheme.colorScheme.background), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+fun SignupScreen(modifier: Modifier=Modifier){
+    Column(modifier.fillMaxSize().background(color=MaterialTheme.colorScheme.background), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         UserTextField(value="Enter your name", onChangeValue ={} , label ="Name" )
         UserTextField(value="Enter your email or contact", onChangeValue ={} , label ="Email or Contact" )
-        ApprovalButton(onClick = { /*TODO*/ }, label = "Login", backgroundColor = Color.Blue)
+        UserTextField(value="Enter your password", onChangeValue ={} , label ="Password" )
+        UserTextField(value="Enter your fracture type", onChangeValue ={} , label ="FractureType" )
+        UserTextField(value="Enter your caretaker's contact", onChangeValue ={} , label ="Caretaker's Contact" )
+        ApprovalButton(onClick = { /*TODO*/ }, label = "Signup", backgroundColor = Color.Blue)
         Image(painter = painterResource(id = R.drawable.google_removebg_preview), contentDescription = "logo")
     }
 }
 @Preview
 @Composable
-fun LoginScreenPreview(modifier: Modifier=Modifier){
-LoginScreen()
+fun SignupScreenPreview(modifier: Modifier=Modifier){
+  SignupScreen()
 }
